@@ -121,7 +121,7 @@ void loop () {
   }
   Serial.println();
 
-if (RTC.getHours() > 22 || RTC.getHours() < 6) {
+if (RTC.getHours() > 20 || RTC.getHours() < 6) {
   blue=255;
   red=0;
   green=0; 
@@ -132,6 +132,10 @@ if (RTC.getHours() > 22 || RTC.getHours() < 6) {
 } else if (RTC.getHours() >= 7 && RTC.getHours() < 9) {
   blue=0;
   red=0;
+  green=255;
+} else if (RTC.getHours() >=14 && RTC.getHours() <15){
+  blue=0;
+  red=255;
   green=255;
 } else {
   blue=255;
