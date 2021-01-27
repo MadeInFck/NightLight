@@ -23,14 +23,11 @@ void setup () {
   pixels.setBrightness(30);
  
   RTC.begin();
-  RTC.setDateTime(__DATE__, __TIME__);
-//  Serial.begin(9600);
+ // RTC.setDateTime(__DATE__, __TIME__);
+  //RTC.startClock();
+  Serial.begin(9600);
 //  Serial.println("New Time Set");
-//  Serial.print(__DATE__);
-//  Serial.print(" ");
-//  Serial.println(__TIME__);
-//  RTC.startClock();
-  
+//  
 
 //  Serial.println();
 //  Serial.println("*** RTC 1307 ***");
@@ -145,6 +142,11 @@ if (RTC.getHours() >= 20 || RTC.getHours() < 7) {
   Serial.print(green);
   Serial.print(" Bleu: ");
   Serial.println(blue);
+  Serial.print(RTC.getHours());
+  Serial.print(":");
+  Serial.print(RTC.getMinutes());
+  Serial.print(":");
+  Serial.println(RTC.getSeconds());;
   
   
 }
