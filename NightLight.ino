@@ -31,9 +31,13 @@ if (RTC.getHours() >= 20 || RTC.getHours() < 7) {
   blue=255;
   red=0;
   green=0; 
-} else if (RTC.getHours() >= 7 && RTC.getMinutes() < 30) {
+} else if (RTC.getHours() == 7 && RTC.getMinutes() < 30) {
   blue=0;
   red=0;
+  green=255;
+} else if (RTC.getHours() == 7 && RTC.getMinutes() > 30) {
+  blue=255;
+  red=255;
   green=255;
 } else {
   blue=255;
